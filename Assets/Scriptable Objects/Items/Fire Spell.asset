@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0575422f93b5de84486d65200ba4138e, type: 3}
+  m_Name: Fire Spell
+  m_EditorClassIdentifier: 
+  itemName: Fire Spell
+  itemDescription: Shoot Fire!
+  icon: {fileID: 1933103220, guid: b235b3a7240b57741a486752e2b08c6f, type: 3}
+  handPrefab: {fileID: 9063909686237879955, guid: b10e94583b8f1f84d95fe71e60f1e356,
+    type: 3}
+  itemClass: 18
+  damageClass: 4
+  itemLevel: 1
+  itemSellValue: 0
+  stackable: 1
+  toolDamage: 0
+  buttonTagEnum: 2
+  ItemAction: {fileID: 11400000, guid: 55ec4b0a4f4e2b44a933bee773d70260, type: 2}
+  animationString: 3
+  holdAnimationString: 2
+  spellType: 0
+  spellPrefab: {fileID: 0}
