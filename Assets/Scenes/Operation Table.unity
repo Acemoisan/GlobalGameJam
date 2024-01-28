@@ -809,49 +809,11 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 91743713}
-          m_TargetAssemblyTypeName: HUDMessage, Assembly-CSharp
-          m_MethodName: TriggerPopUpTextTemporaryTwo
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 'Strange and Dark forces surround you. You never seem
-              to make it passed 6 am . . . '
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
     - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 91743708}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
     - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 91743713}
-          m_TargetAssemblyTypeName: HUDMessage, Assembly-CSharp
-          m_MethodName: TriggerPopUpTextTemporaryTwo
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: You dream that you can use spells. But you have no
-              idea what you're doing. Try this!
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!1 &146033645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6117078751753912663, guid: 05f868f17b7a56e41812dbd443a8913a,
@@ -2494,7 +2456,7 @@ PrefabInstance:
     - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
         type: 3}
       propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
         type: 3}
@@ -2519,7 +2481,7 @@ PrefabInstance:
     - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
         type: 3}
       propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
         type: 3}
@@ -2551,7 +2513,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 2017600615}
+      objectReference: {fileID: 532416662}
     - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
         type: 3}
       propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[5].m_Target
@@ -2605,7 +2567,7 @@ PrefabInstance:
     - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
         type: 3}
       propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: LoadHighscore
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
         type: 3}
@@ -2635,7 +2597,7 @@ PrefabInstance:
     - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
         type: 3}
       propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: Highscore, Assembly-CSharp
+      value: UnityEngine.Playables.PlayableDirector, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
         type: 3}
@@ -2709,6 +2671,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
         type: 3}
+      propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 42ec5ab8361e59246ace1e8c4e260ffd,
+        type: 2}
+    - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
+        type: 3}
       propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_StringArgument
       value: 
       objectReference: {fileID: 0}
@@ -2740,7 +2708,7 @@ PrefabInstance:
     - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
         type: 3}
       propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.Playables.PlayableAsset, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4580392745997748019, guid: 05f868f17b7a56e41812dbd443a8913a,
         type: 3}
@@ -3346,8 +3314,6 @@ PlayableDirector:
     value: {fileID: 86897017}
   - key: {fileID: -3619249669332535296, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
     value: {fileID: 303848331}
-  - key: {fileID: 255125675769490035, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
-    value: {fileID: 86897014}
   - key: {fileID: 1311752155397536898, guid: 348422428f9eb77439e72faae80564f1, type: 2}
     value: {fileID: 0}
   - key: {fileID: 7912768631312117356, guid: 348422428f9eb77439e72faae80564f1, type: 2}
@@ -3358,26 +3324,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 1769527756048259, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
     value: {fileID: 91743714}
-  - key: {fileID: -3069146961837229516, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 1019105768188853125, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
-    value: {fileID: 436177452}
   - key: {fileID: -6819714834779525745, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
     value: {fileID: 1947936732}
-  - key: {fileID: -8964422903756072092, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -8883295551582848695, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 6423624913633563506, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -5181714445594808908, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -4957449029064707228, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -4764955765769256906, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 3370554764229615378, guid: a4a6eafd680eeb7468643245c50c453d, type: 2}
-    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 5977727b-ba91-405c-85c6-403b72bb6713: {fileID: 86897016}
@@ -11002,7 +10950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -2.2682, y: 131}
+  m_AnchoredPosition: {x: -2.2682, y: -9}
   m_SizeDelta: {x: 1960.3926, y: 330.3299}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1964805256
@@ -11028,9 +10976,8 @@ MonoBehaviour:
   m_text: These commands should get you started. Search the area for tools to aid
     your survival
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ee2c91f93ba48de448d38b06524233af, type: 2}
-  m_sharedMaterial: {fileID: 474364317182987851, guid: ee2c91f93ba48de448d38b06524233af,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13603,8 +13550,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6186645281021445585}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.019273117, y: -0.4851751, z: -0.011296015, w: 0.8741317}
-  m_LocalPosition: {x: 75.58, y: 8.2, z: 63.24}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
