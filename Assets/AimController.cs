@@ -4,77 +4,83 @@ using UnityEngine;
 using Acemoisan.Utils;
 using UnityEngine.InputSystem;
 
-
 public class AimController : MonoBehaviour
 {
-    [SerializeField] Camera _mainCamera;
-    [SerializeField] GameObject debugTransform;
-    [SerializeField] LayerMask aimCollider;
-    [SerializeField] LayerMask bodyCollider;
-    [SerializeField] LineRenderer aimLineRenderer;
+    [Header("Movement Settings")]
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveRange = 10f; // How far the object can move from center
+    
+    [Header("References")]
+    [SerializeField] private Transform baseObject; // Reference to your base object
+    private Transform currentInteractable; // This will be your debugTransform
+    
+    private Vector3 initialPosition;
+    private Vector2 movementInput;
 
-    //public Vector3 AimWorldPosition { get { return aimWorldPosition; } }
-    Vector3 aimWorldPosition;
-    Vector3 aimInput;
-    bool canAim = false;
-
-
-
-    void Start()
+    void Update()
     {
-        debugTransform.SetActive(true);
-        aimInput = (aimInput * 0.5f + Vector3.one * 0.5f) * new Vector2(Screen.width, Screen.height);
-        GetAimWorldPosition(_mainCamera, aimInput);
-        debugTransform.transform.position = aimWorldPosition;        
-        Invoke("CanAim", 3f);
+        if (currentInteractable == null) return;
+        
+        // Apply movement based on input
+        MoveInteractable();
     }
 
-    void CanAim()
+    // This method will be called from your PlayerInput component's OnMovement event
+    public void OnMovement(InputAction.CallbackContext context)
     {
-        canAim = true;
+        if (currentInteractable == null) return;
+        
+        // Get the 2D vector input from the PlayerInput system
+        movementInput = context.ReadValue<Vector2>();
     }
 
-void Update()
-{
-    if(canAim == false) return;
-    if (Gamepad.current != null)
+    private void MoveInteractable()
     {
-        aimInput = Gamepad.current.rightStick.ReadValue();
-
-        //Debug.Log("Controller is working and on " + aimInput);
-        aimInput = (aimInput * 0.5f + Vector3.one * 0.5f) * new Vector2(Screen.width, Screen.height);
+        if (movementInput.magnitude < 0.1f) return; // Dead zone
+        
+        // Get the base's up vector as the reference direction
+        Vector3 baseUp = baseObject.up;
+        
+        // Calculate movement using the base's up vector as reference
+        Vector3 movement = new Vector3(movementInput.x, 0f, movementInput.y) * moveSpeed * Time.deltaTime;
+        
+        // Apply movement to the current interactable
+        Vector3 newPosition = currentInteractable.position + movement;
+        
+        // Keep Y position the same
+        newPosition.y = currentInteractable.position.y;
+        currentInteractable.position = newPosition;
     }
-    else
+
+    private Vector3 ClampPositionToRange(Vector3 position, Vector3 center, float range)
     {
-        aimInput = Input.mousePosition;
-    }
-
-
-    GetAimWorldPosition(_mainCamera, aimInput);
-    debugTransform.transform.position = aimWorldPosition;
-}
-
-
-    void GetAimWorldPosition(Camera camera, Vector3 aimPos)
-    {
-        if (camera != null)
+        Vector3 offset = position - center;
+        offset.y = 0f; // Keep Y at the same level
+        
+        if (offset.magnitude > range)
         {
-            Ray ray = camera.ScreenPointToRay(aimPos);
-            if (Physics.Raycast(ray, out RaycastHit bodyHit, 1000f, bodyCollider))
-            {
-                aimWorldPosition = bodyHit.point;
-            }
-            else if (Physics.Raycast(ray, out RaycastHit hit, 1000f, aimCollider))
-            {
-                aimWorldPosition = hit.point;
-            }
-            else
-            {
-                aimWorldPosition = Vector3.zero;
-            }
+            offset = offset.normalized * range;
+        }
+        
+        return center + offset;
+    }
+
+    // Optional: Method to reset position to center
+    public void ResetPosition()
+    {
+        if (currentInteractable != null)
+        {
+            currentInteractable.position = initialPosition;
         }
     }
 
-
-
+    // Optional: Method to change the current interactable at runtime
+    public void SetCurrentInteractable(Transform newInteractable)
+    {
+        currentInteractable = newInteractable;
+        if (currentInteractable != null)
+        {
+            initialPosition = currentInteractable.position;
+        }
+    }
 }
