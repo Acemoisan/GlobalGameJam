@@ -11,8 +11,7 @@ public class AimController : MonoBehaviour
     [SerializeField] private float moveRange = 10f; // How far the object can move from center
     
     [Header("References")]
-    [SerializeField] private Transform baseObject; // Reference to your base object
-    private Transform currentInteractable; // This will be your debugTransform
+    [SerializeField] private Transform currentInteractable; // This will be your debugTransform
     
     private Vector3 initialPosition;
     private Vector2 movementInput;
@@ -38,8 +37,6 @@ public class AimController : MonoBehaviour
     {
         if (movementInput.magnitude < 0.1f) return; // Dead zone
         
-        // Get the base's up vector as the reference direction
-        Vector3 baseUp = baseObject.up;
         
         // Calculate movement using the base's up vector as reference
         Vector3 movement = new Vector3(movementInput.x, 0f, movementInput.y) * moveSpeed * Time.deltaTime;
@@ -52,25 +49,20 @@ public class AimController : MonoBehaviour
         currentInteractable.position = newPosition;
     }
 
-    private Vector3 ClampPositionToRange(Vector3 position, Vector3 center, float range)
-    {
-        Vector3 offset = position - center;
-        offset.y = 0f; // Keep Y at the same level
-        
-        if (offset.magnitude > range)
-        {
-            offset = offset.normalized * range;
-        }
-        
-        return center + offset;
-    }
-
     // Optional: Method to reset position to center
     public void ResetPosition()
     {
         if (currentInteractable != null)
         {
             currentInteractable.position = initialPosition;
+        }
+    }
+
+    public void SetPosition(Vector3 position)
+    {
+        if (currentInteractable != null)
+        {
+            currentInteractable.position = position;
         }
     }
 

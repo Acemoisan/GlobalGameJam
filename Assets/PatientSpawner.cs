@@ -12,7 +12,7 @@ public class PatientSpawner : MonoBehaviour
 
     public void RemoveCurrentPatient()
     {
-        StartCoroutine(KillPatient(3f));
+        StartCoroutine(KillPatient(2f));
     }
 
     IEnumerator KillPatient(float delay)

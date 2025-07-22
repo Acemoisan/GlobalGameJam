@@ -5,17 +5,12 @@ using UnityEngine.Events;
 
 public class PatientController : MonoBehaviour
 {
-    [SerializeField] AimController aimController;
     [SerializeField] Rigidbody mainRB;
     [SerializeField] Collider mainCollider;
     [SerializeField] int patientLives = 5;
     [SerializeField] List<GameObject> limbs;
-    [SerializeField] Transform levelSpawnPos;
-    [SerializeField] List<IndividualLevelController> easyLevels;
-    [SerializeField] List<GameObject> mediumLevels;
-    [SerializeField] List<GameObject> hardLevels;
     [SerializeField] GameObject head;
-        [SerializeField] GameObject spine1;
+    [SerializeField] GameObject spine1;
     [SerializeField] GameObject spine2;
 
     public UnityEvent OnDeath;
@@ -23,9 +18,9 @@ public class PatientController : MonoBehaviour
 
     private void Start()
     {
-        Invoke("SpawnLevel", 3);
-        mainCollider.enabled = false;
-        mainRB.isKinematic = true;
+        //Invoke("SpawnLevel", 3);
+        // mainCollider.enabled = false;
+        // mainRB.isKinematic = true;
     }
 
     public void Explode()
@@ -49,40 +44,6 @@ public class PatientController : MonoBehaviour
         // head.SetActive(true);
     }
 
-    void SpawnLevel()
-    {
-        IndividualLevelController level = easyLevels[0];
-        if(level == null) return;
-
-        level.gameObject.SetActive(true);
-        if(aimController != null && level.GetInteractable() != null)
-        {
-            aimController.SetCurrentInteractable(level.GetInteractable().transform);
-        }
-
-
-
-        // if(GameStateManager.instance != null)
-        // {
-        //     int patientsSaved = GameStateManager.instance.GetPatientsSaved();
-
-        //     if(patientsSaved < 3)
-        //     {
-        //         int randomNumber = Random.Range(0, easyLevels.Count);
-        //         easyLevels[randomNumber].SetActive(true);
-        //     }
-        //     else if(patientsSaved < 6)
-        //     {
-        //         int randomNumber = Random.Range(0, mediumLevels.Count);
-        //         mediumLevels[randomNumber].SetActive(true);
-        //     }
-        //     else
-        //     {
-        //         int randomNumber = Random.Range(0, hardLevels.Count);
-        //         hardLevels[randomNumber].SetActive(true);
-        //     }
-        // }
-    }
 
     public void TakeDamage()
     {

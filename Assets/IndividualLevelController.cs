@@ -4,10 +4,5 @@ using UnityEngine;
 
 public class IndividualLevelController : MonoBehaviour
 {
-    [SerializeField] GameObject interactable;
-
-    public GameObject GetInteractable()
-    {
-        return interactable;
-    }
+    [SerializeField] public Transform spawnPoint;
 }
