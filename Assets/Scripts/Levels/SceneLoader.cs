@@ -17,7 +17,7 @@ public class SceneLoader : MonoBehaviour
     public SceneSO sceneToLoad;
     public LevelEntranceSO levelEntrance;
     public bool showLoadingScreen;
-    
+
 
 
     [Header("Player Path")]
@@ -49,5 +49,25 @@ public class SceneLoader : MonoBehaviour
     public void ReloadScene()
     {
         SceneLoaderManager.Instance.ReloadCurrentScene();
+    }
+    
+
+    public void StartAutoQuitCoroutine()
+    {
+        Debug.Log("Starting auto quit coroutine...");
+        StopAllCoroutines();
+        StartCoroutine(AutoQuitAfterDelay());
+    }
+
+    private IEnumerator AutoQuitAfterDelay()
+    {
+        yield return new WaitForSecondsRealtime(180); // 3 minutes
+        QuitGame();
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quitting game...");
+        Application.Quit();
     }
 }

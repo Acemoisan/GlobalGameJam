@@ -25,13 +25,14 @@ public class GameStateManager : MonoBehaviour
     public void PatientDeath()
     {
         OnDeath?.Invoke();
+        SetActivePatient(null);
     }
 
     public void SavedPatient()
     {
         patientsSaved += 1;
         OnWin?.Invoke();
-        GetActivePatient().GetComponent<PatientController>().Explode();
+        //GetActivePatient().GetComponent<PatientController>().Explode();
     }
 
     public int GetPatientsSaved()

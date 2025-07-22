@@ -30,19 +30,19 @@ public class HitDetection : MonoBehaviour
             OnEnter?.Invoke();
         }
 
-        else if (other.CompareTag(objectiveTag))
-        {
-            other.transform.parent = transform;
-            carryingObjective = true;
-            objective = other.gameObject;
-        }
+        // else if (other.CompareTag(objectiveTag))
+        // {
+        //     other.transform.parent = transform;
+        //     carryingObjective = true;
+        //     objective = other.gameObject;
+        // }
 
         else if (other.CompareTag(finishLineTag))
         {
-            if (carryingObjective)
+            if (GameStateManager.instance != null)
             {
                 GameStateManager.instance.SavedPatient();
-                DestroyObjective();
+                //DestroyObjective();
             }
         }
     }

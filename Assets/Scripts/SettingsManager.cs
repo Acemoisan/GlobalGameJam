@@ -9,35 +9,39 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] TMP_Dropdown resolutionDropdown;
     [SerializeField] TMP_Dropdown graphicsDropdown;
     [SerializeField] Toggle fullScreenToggle;
-    bool isFullScreen;
+    bool isFullScreen = true;
     Resolution[] resolutions;
 
 
     void Start()
     {
-        resolutions = Screen.resolutions;
+        // resolutions = Screen.resolutions;
 
-        resolutionDropdown.ClearOptions();
+        // resolutionDropdown.ClearOptions();
 
-        List<string> options = new List<string>();
+        // List<string> options = new List<string>();
 
-        int currentResolutionIndex = 0;
-        for(int i = 0; i < resolutions.Length; i++)
-        {
-            string option = resolutions[i].width + "x" + resolutions[i].height;
-            options.Add(option);
+        // int currentResolutionIndex = 0;
+        // for(int i = 0; i < resolutions.Length; i++)
+        // {
+        //     string option = resolutions[i].width + "x" + resolutions[i].height;
+        //     options.Add(option);
 
-            if(resolutions[i].width == Screen.currentResolution.width &&
-               resolutions[i].height == Screen.currentResolution.height) 
-            { 
-                currentResolutionIndex = i; 
-            }
-            Debug.Log("Resolution: " + option);
-        }
+        //     if(resolutions[i].width == Screen.currentResolution.width &&
+        //        resolutions[i].height == Screen.currentResolution.height) 
+        //     { 
+        //         currentResolutionIndex = i; 
+        //     }
+        //     Debug.Log("Resolution: " + option);
+        // }
 
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
+        // resolutionDropdown.AddOptions(options);
+        // resolutionDropdown.value = currentResolutionIndex;
+        // resolutionDropdown.RefreshShownValue();
+        //set to full screen 
+        
+        Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+        Screen.SetResolution(Display.main.systemWidth, Display.main.systemHeight, true);
     }
 
 
@@ -58,9 +62,9 @@ public class SettingsManager : MonoBehaviour
         QualitySettings.SetQualityLevel(graphicsDropdown.value);
     }
 
-    public void ToggleFullScreen()
-    {
-        isFullScreen = fullScreenToggle.isOn;
-        Screen.fullScreen = isFullScreen;
-    }
+    // public void ToggleFullScreen()
+    // {
+    //     isFullScreen = fullScreenToggle.isOn;
+    //     Screen.fullScreen = isFullScreen;
+    // }
 }

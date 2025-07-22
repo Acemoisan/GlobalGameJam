@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "GlobalGameJam.sln"
+    "dotnet.defaultSolution": "PleaseDontKillMe.sln"
 }

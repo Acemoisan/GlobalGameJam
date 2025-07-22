@@ -14,8 +14,23 @@ public class LevelSpawner : MonoBehaviour
         Invoke("SpawnLevel", 3);
     }
 
-    void SpawnLevel()
+    public void SpawnLevel()
     {
+
+        //disable all levels initially 
+        foreach (IndividualLevelController easyLevels in easyLevels)
+        {
+            easyLevels.gameObject.SetActive(false);
+        }
+        foreach (IndividualLevelController mediumLevels in mediumLevels)
+        {
+            mediumLevels.gameObject.SetActive(false);
+        }
+        foreach (IndividualLevelController hardLevels in hardLevels)
+        {
+            hardLevels.gameObject.SetActive(false);
+        }
+
         IndividualLevelController level = easyLevels[0];
         if(level == null) return;
 

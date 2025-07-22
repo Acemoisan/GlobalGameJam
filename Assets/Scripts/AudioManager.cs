@@ -84,10 +84,10 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySound(Sound sound)
     {
-        if(CanPlaySound(sound) == false) { return; }
-        UnityEngine.GameObject soundGameObject = new UnityEngine.GameObject("Sound");
-        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.PlayOneShot(instance.GetAudioClip(sound));
+        if (CanPlaySound(sound) == false) { return; }
+        // UnityEngine.GameObject soundGameObject = new UnityEngine.GameObject("Sound");
+        // AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+        PlaySFX(instance.GetAudioClip(sound));
     }
 
     //3D Audio!

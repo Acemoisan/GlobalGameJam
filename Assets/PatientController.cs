@@ -5,13 +5,13 @@ using UnityEngine.Events;
 
 public class PatientController : MonoBehaviour
 {
-    [SerializeField] Rigidbody mainRB;
-    [SerializeField] Collider mainCollider;
+    //[SerializeField] Rigidbody mainRB;
+    //[SerializeField] Collider mainCollider;
     [SerializeField] int patientLives = 5;
     [SerializeField] List<GameObject> limbs;
     [SerializeField] GameObject head;
-    [SerializeField] GameObject spine1;
-    [SerializeField] GameObject spine2;
+    // [SerializeField] GameObject spine1;
+    // [SerializeField] GameObject spine2;
 
     public UnityEvent OnDeath;
 
@@ -25,18 +25,18 @@ public class PatientController : MonoBehaviour
 
     public void Explode()
     {
-        Debug.Log("Explode");
-        foreach(GameObject limb in limbs)
-        {
-            limb.SetActive(false);
-        }
-        head.SetActive(false);
-        spine1.SetActive(false);
-        spine2.SetActive(false);
-        mainCollider.enabled = true;
-        mainRB.isKinematic = false;
-        mainRB.AddExplosionForce(1000f, transform.position, 10f);
-        AudioManager.instance.PlaySound(Sound.Explode);
+        // Debug.Log("Explode");
+        // foreach(GameObject limb in limbs)
+        // {
+        //     limb.SetActive(false);
+        // }
+        // head.SetActive(false);
+        // spine1.SetActive(false);
+        // spine2.SetActive(false);
+        //mainCollider.enabled = true;
+        // mainRB.isKinematic = false;
+        // mainRB.AddExplosionForce(1000f, transform.position, 10f);
+        //AudioManager.instance.PlaySound(Sound.Explode);
 
         // foreach(GameObject level in easyLevels)
         // {

@@ -128,7 +128,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -5152,13 +5152,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 000102030405
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -9951,13 +9953,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 1
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -10094,7 +10098,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -10243,7 +10247,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -15134,13 +15138,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -19933,13 +19939,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 1
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -20431,7 +20439,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -20580,7 +20588,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -20729,7 +20737,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -25451,13 +25459,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -30381,13 +30391,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 1
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -30687,7 +30699,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -30836,7 +30848,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -30985,7 +30997,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -31441,7 +31453,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -31887,7 +31899,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -32141,7 +32153,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -37024,13 +37036,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 000102030405
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -37168,7 +37182,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -41889,13 +41903,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 000102030405
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -42270,7 +42286,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -42419,7 +42435,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -42769,7 +42785,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -43340,7 +43356,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -48037,13 +48053,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -48213,7 +48231,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -48282,6 +48300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7aa23a16eb6bf3478b11456005764a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
 --- !u!1 &4768760061058509735
 GameObject:
   m_ObjectHideFlags: 0
@@ -48666,7 +48685,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -48815,7 +48834,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -48964,7 +48983,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -49113,7 +49132,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -49446,7 +49465,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -49676,7 +49695,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -49825,7 +49844,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -49856,7 +49875,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4791451797754154899}
-  - component: {fileID: 7312333883496303279}
   m_Layer: 6
   m_Name: menu patient
   m_TagString: Untagged
@@ -49886,33 +49904,6 @@ Transform:
   - {fileID: 174596513612366223}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90.863}
---- !u!114 &7312333883496303279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5536695450387059896}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5c6b27879028b74dbfccf6a0b0ad7f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patientLives: 5
-  limbs:
-  - {fileID: 4768760061058509735}
-  - {fileID: 751840394607251358}
-  - {fileID: 2805594409589634378}
-  - {fileID: 941481302000256496}
-  levelSpawnPos: {fileID: 2829048235611924780}
-  easyLevels:
-  - {fileID: 5199896112448566414}
-  mediumLevels: []
-  hardLevels: []
-  head: {fileID: 8444859886009889716}
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &5559869317150968744
 GameObject:
   m_ObjectHideFlags: 0
@@ -50072,7 +50063,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -50360,7 +50351,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -50873,7 +50864,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -51022,7 +51013,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -51171,7 +51162,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -51436,7 +51427,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -56165,13 +56156,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -60856,13 +60849,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -60999,7 +60994,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -61148,7 +61143,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -65870,13 +65865,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -70645,13 +70642,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -75444,13 +75443,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 1
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -75587,7 +75588,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -75736,7 +75737,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -75885,7 +75886,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -76035,7 +76036,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -80756,13 +80757,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 000102030405
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -85630,13 +85633,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -90429,13 +90434,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 1
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -90962,7 +90969,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -95814,13 +95821,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 000102030405
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -95957,7 +95966,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -100839,13 +100848,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -100982,7 +100993,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -101131,7 +101142,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -101280,7 +101291,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -101349,6 +101360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7aa23a16eb6bf3478b11456005764a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
 --- !u!1 &8813758380538861242
 GameObject:
   m_ObjectHideFlags: 0
@@ -101476,7 +101488,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1
@@ -106263,13 +106275,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 1
   m_VertexStreams: 0001030402
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -106406,7 +106420,7 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7312333883496303279}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PatientController, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 1

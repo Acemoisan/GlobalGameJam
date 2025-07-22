@@ -8,4 +8,9 @@ public class CursorManager : MonoBehaviour
     {
         Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
     }
+
+    public void ShowCursor(bool show)
+    {
+        Cursor.visible = show;
+    }
 }

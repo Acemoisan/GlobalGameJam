@@ -14,9 +14,9 @@ public class PatientSpawner : MonoBehaviour
     GameObject currentPatient;
 
 
-    public void RemoveCurrentPatient()
+    public void RemoveCurrentPatient(float delay)
     {
-        StartCoroutine(KillPatient(2f));
+        StartCoroutine(KillPatient(delay));
     }
 
     void DisplayPatientInfo()
@@ -44,9 +44,9 @@ public class PatientSpawner : MonoBehaviour
         }    
     }
 
-    public void SpawnPatient()
+    public void SpawnPatient(float delay)
     {
-        StartCoroutine(SpawnPatientAfterDelay(3f));
+        StartCoroutine(SpawnPatientAfterDelay(delay));
     }
 
     IEnumerator SpawnPatientAfterDelay(float delay)

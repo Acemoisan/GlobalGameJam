@@ -6,25 +6,14 @@ using UnityEngine;
 public class Scoreboard : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
-    int score;
 
 
     public void WipeScore()
     {
-        score = 0;
-        scoreText.text = score.ToString() + " Patients Saved";
+        scoreText.text = 0 + " Patients Saved";
     }
 
-    public void IncreaseScore()
-    {
-        score += 1;
-        scoreText.text = score.ToString() + " Patients Saved";
-
-        //saving highscore
-        SaveHighscore();
-    }
-
-    public void SaveHighscore()
+    public void SaveHighscore(int score)
     {
         int currentHighscore = PlayerPrefs.GetInt("Highscore", 0);
 
@@ -32,6 +21,17 @@ public class Scoreboard : MonoBehaviour
         {
             PlayerPrefs.SetInt("Highscore", score);
             PlayerPrefs.Save();
+        }
+    }
+
+    public void UpdateScore()
+    {
+        if (GameStateManager.instance != null)
+        {
+            int score = GameStateManager.instance.GetPatientsSaved();
+            scoreText.text = score + " Patients Saved";
+            
+            SaveHighscore(score);
         }
     }
 }
