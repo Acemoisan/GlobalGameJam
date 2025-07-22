@@ -17,9 +17,10 @@ public class HitDetection : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("OnTriggerEnter: " + other.name);
         if (other.CompareTag(interactableTag))
         {
-            if(other.GetComponent<Interactable>() == null) { Debug.LogError("Interactable Component is null on, " + other); }
+            if (other.GetComponent<Interactable>() == null) { Debug.LogError("Interactable Component is null on, " + other); }
 
             interactee = other.GetComponent<Interactable>();
 
@@ -36,9 +37,9 @@ public class HitDetection : MonoBehaviour
             objective = other.gameObject;
         }
 
-        else if(other.CompareTag(finishLineTag))
+        else if (other.CompareTag(finishLineTag))
         {
-            if(carryingObjective)
+            if (carryingObjective)
             {
                 GameStateManager.instance.SavedPatient();
                 DestroyObjective();
