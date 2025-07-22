@@ -23,7 +23,8 @@ public class HitDetection : MonoBehaviour
 
             interactee = other.GetComponent<Interactable>();
 
-            Debug.Log("hit " + other.name);
+            //Debug.Log("hit " + other.name);
+            AudioManager.instance.PlaySound(Sound.HitDetection);
             interactee.OnEnter();
             OnEnter?.Invoke();
         }

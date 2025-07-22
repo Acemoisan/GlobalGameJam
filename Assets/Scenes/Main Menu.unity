@@ -1678,7 +1678,7 @@ MonoBehaviour:
   - {fileID: 331534415}
   - {fileID: 207211694}
   patientPrefabs:
-  - {fileID: 5536695450387059896, guid: 470dd98f6d41cfc43a3b47d23b42aad3, type: 3}
+  - {fileID: 3994005882252367783, guid: 1972150b0d6ef9448ad6d91baf18f1c8, type: 3}
 --- !u!4 &317896673
 Transform:
   m_ObjectHideFlags: 0

@@ -10,7 +10,11 @@ public enum Sound{
     EnemyHit,
     EnemyDie,
     PickupItem,
-    Treasure
+    Treasure,
+    HitDetection,
+    Explode,
+    LimbPopOff,
+    BodyDrop
 }
 
 [System.Serializable]

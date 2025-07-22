@@ -40,6 +40,7 @@ public class PatientController : MonoBehaviour
         mainCollider.enabled = true;
         mainRB.isKinematic = false;
         mainRB.AddExplosionForce(1000f, transform.position, 10f);
+        AudioManager.instance.PlaySound(Sound.Explode);
 
         // foreach(GameObject level in easyLevels)
         // {
@@ -54,12 +55,12 @@ public class PatientController : MonoBehaviour
         {
             int patientsSaved = GameStateManager.instance.GetPatientsSaved();
 
-            if(patientsSaved < 3)
+            if(patientsSaved < 2)
             {
                 int randomNumber = Random.Range(0, easyLevels.Count);
                 easyLevels[randomNumber].SetActive(true);
             }
-            else if(patientsSaved < 6)
+            else if(patientsSaved < 5)
             {
                 int randomNumber = Random.Range(0, mediumLevels.Count);
                 mediumLevels[randomNumber].SetActive(true);
@@ -105,6 +106,7 @@ public class PatientController : MonoBehaviour
         }
         //limb.SetActive(false);
         limbs.RemoveAt(randomNumber);
+        AudioManager.instance.PlaySound(Sound.LimbPopOff);
     }
 
 }
