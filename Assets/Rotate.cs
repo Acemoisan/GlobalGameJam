@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rotate : MonoBehaviour
 {
     [SerializeField] bool active = false;
+    [SerializeField] float rotationSpeed = 100f;
     Vector3 defaultRot;
 
     void Start()
@@ -15,7 +16,7 @@ public class Rotate : MonoBehaviour
     void Update()
     {
         if(active == false) return;
-        transform.Rotate(-Vector3.forward * 100 * Time.deltaTime);
+        transform.Rotate(-Vector3.forward * rotationSpeed * Time.deltaTime);
     }
 
 

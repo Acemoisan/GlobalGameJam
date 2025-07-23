@@ -11,6 +11,8 @@ public class PatientSpawner : MonoBehaviour
     [SerializeField] List<string> patientIssues;
 
     [SerializeField] List<GameObject> patientPrefabs;
+    [SerializeField] Material patientMaterial;
+    [SerializeField] Gradient patientColor;
     GameObject currentPatient;
 
 
@@ -58,5 +60,15 @@ public class PatientSpawner : MonoBehaviour
         currentPatient = patient;    
         GameStateManager.instance.SetActivePatient(patient);
         AudioManager.instance.PlaySound(Sound.BodyDrop);
+        
+        // Set random color from gradient on patient's material
+        if (patientColor != null && patientMaterial != null)
+        {
+            float randomTime = Random.Range(0f, 1f);
+            Color randomColor = patientColor.Evaluate(randomTime);
+            
+            // Set the _BaseColor property for toon shader
+            patientMaterial.SetColor("_BaseColor", randomColor);
+        }
     }
 }

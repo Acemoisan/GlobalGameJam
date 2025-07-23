@@ -31,36 +31,36 @@ public class LevelSpawner : MonoBehaviour
             hardLevels.gameObject.SetActive(false);
         }
 
-        IndividualLevelController level = easyLevels[0];
-        if(level == null) return;
 
-        level.gameObject.SetActive(true);
-        if(aimController != null)
+        IndividualLevelController chosenLevel;
+
+        if (GameStateManager.instance != null)
         {
-            aimController.SetPosition(level.spawnPoint.position);
+            int patientsSaved = GameStateManager.instance.GetPatientsSaved();
+
+            if (patientsSaved < 3)
+            {
+                int randomNumber = Random.Range(0, easyLevels.Count);
+                chosenLevel = easyLevels[randomNumber];
+                chosenLevel.gameObject.SetActive(true);
+            }
+            else if (patientsSaved < 6)
+            {
+                int randomNumber = Random.Range(0, mediumLevels.Count);
+                chosenLevel = mediumLevels[randomNumber];
+                chosenLevel.gameObject.SetActive(true);
+            }
+            else
+            {
+                int randomNumber = Random.Range(0, hardLevels.Count);
+                chosenLevel = hardLevels[randomNumber];
+                chosenLevel.gameObject.SetActive(true);
+            }
+
+            if (aimController != null)
+            {
+                aimController.SetPosition(chosenLevel.spawnPoint.position);
+            }
         }
-
-
-
-        // if(GameStateManager.instance != null)
-        // {
-        //     int patientsSaved = GameStateManager.instance.GetPatientsSaved();
-
-        //     if(patientsSaved < 3)
-        //     {
-        //         int randomNumber = Random.Range(0, easyLevels.Count);
-        //         easyLevels[randomNumber].SetActive(true);
-        //     }
-        //     else if(patientsSaved < 6)
-        //     {
-        //         int randomNumber = Random.Range(0, mediumLevels.Count);
-        //         mediumLevels[randomNumber].SetActive(true);
-        //     }
-        //     else
-        //     {
-        //         int randomNumber = Random.Range(0, hardLevels.Count);
-        //         hardLevels[randomNumber].SetActive(true);
-        //     }
-        // }
     }
 }
