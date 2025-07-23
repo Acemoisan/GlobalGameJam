@@ -29,8 +29,8 @@ public class Scoreboard : MonoBehaviour
         if (GameStateManager.instance != null)
         {
             int score = GameStateManager.instance.GetPatientsSaved();
-            scoreText.text = score + " Patients Saved";
-            
+            scoreText.text = " Patients Saved: " + score + " / " + GameStateManager.instance.GetTotalPatients();
+
             SaveHighscore(score);
         }
     }

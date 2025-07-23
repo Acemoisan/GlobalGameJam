@@ -8,6 +8,7 @@ public class GameStateManager : MonoBehaviour
     public UnityEvent OnWin;
     public UnityEvent OnDeath;
     int patientsSaved;
+    private int _totalPatients;
     GameObject currentlyActivePatient;
 
     public static GameStateManager instance;
@@ -38,6 +39,16 @@ public class GameStateManager : MonoBehaviour
     public int GetPatientsSaved()
     {
         return patientsSaved;
+    }
+
+    public int GetTotalPatients()
+    {
+        return _totalPatients;
+    }
+
+    public void SetTotalPatients(int total)
+    {
+        _totalPatients = total;
     }
 
     public void SetActivePatient(GameObject patient)

@@ -58,11 +58,12 @@ public class AimController : MonoBehaviour
         }
     }
 
-    public void SetPosition(Vector3 position)
+    public void SetInitialPosition(Vector3 position)
     {
         if (currentInteractable != null)
         {
             currentInteractable.position = position;
+            initialPosition = position;
         }
     }
 

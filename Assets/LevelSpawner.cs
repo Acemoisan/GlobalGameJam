@@ -15,7 +15,9 @@ public class LevelSpawner : MonoBehaviour
     private List<IndividualLevelController> availableMediumLevels = new List<IndividualLevelController>();
     private List<IndividualLevelController> availableHardLevels = new List<IndividualLevelController>();
     private List<IndividualLevelController> availableVeryHardLevels = new List<IndividualLevelController>();
-    
+
+    private IndividualLevelController currentLevel;
+
     // Track which difficulty we're currently on
     private int currentDifficulty = 0; // 0 = easy, 1 = medium, 2 = hard, 3 = very hard
 
@@ -24,6 +26,16 @@ public class LevelSpawner : MonoBehaviour
         // Initialize available levels lists
         InitializeAvailableLevels();
         Invoke("SpawnLevel", 3);
+
+        StartCoroutine(SetTotalPatients());
+    }
+
+    IEnumerator SetTotalPatients()
+    {
+        yield return new WaitUntil(() => GameStateManager.instance != null);
+        yield return new WaitForSeconds(0.1f); // Ensure all levels are initialized
+        int totalPatients = easyLevels.Count + mediumLevels.Count + hardLevels.Count + veryHardLevels.Count;
+        GameStateManager.instance.SetTotalPatients(totalPatients);
     }
 
     private void InitializeAvailableLevels()
@@ -33,7 +45,7 @@ public class LevelSpawner : MonoBehaviour
         availableMediumLevels.Clear();
         availableHardLevels.Clear();
         availableVeryHardLevels.Clear();
-        
+
         foreach (var level in easyLevels)
         {
             availableEasyLevels.Add(level);
@@ -81,7 +93,7 @@ public class LevelSpawner : MonoBehaviour
             int randomIndex = Random.Range(0, availableEasyLevels.Count);
             chosenLevel = availableEasyLevels[randomIndex];
             availableEasyLevels.RemoveAt(randomIndex);
-            
+
             // If we've completed all easy levels, move to medium
             if (availableEasyLevels.Count == 0)
             {
@@ -94,7 +106,7 @@ public class LevelSpawner : MonoBehaviour
             int randomIndex = Random.Range(0, availableMediumLevels.Count);
             chosenLevel = availableMediumLevels[randomIndex];
             availableMediumLevels.RemoveAt(randomIndex);
-            
+
             // If we've completed all medium levels, move to hard
             if (availableMediumLevels.Count == 0)
             {
@@ -107,7 +119,7 @@ public class LevelSpawner : MonoBehaviour
             int randomIndex = Random.Range(0, availableHardLevels.Count);
             chosenLevel = availableHardLevels[randomIndex];
             availableHardLevels.RemoveAt(randomIndex);
-            
+
             // If we've completed all hard levels, move to very hard
             if (availableHardLevels.Count == 0)
             {
@@ -120,7 +132,7 @@ public class LevelSpawner : MonoBehaviour
             int randomIndex = Random.Range(0, availableVeryHardLevels.Count);
             chosenLevel = availableVeryHardLevels[randomIndex];
             availableVeryHardLevels.RemoveAt(randomIndex);
-            
+
             // If we've completed all very hard levels, restart from easy
             if (availableVeryHardLevels.Count == 0)
             {
@@ -133,7 +145,7 @@ public class LevelSpawner : MonoBehaviour
             // Fallback: if something goes wrong, restart from easy
             currentDifficulty = 0;
             InitializeAvailableLevels();
-            
+
             if (availableEasyLevels.Count > 0)
             {
                 int randomIndex = Random.Range(0, availableEasyLevels.Count);
@@ -145,11 +157,22 @@ public class LevelSpawner : MonoBehaviour
         if (chosenLevel != null)
         {
             chosenLevel.gameObject.SetActive(true);
-            
+            currentLevel = chosenLevel;
+
             if (aimController != null)
             {
-                aimController.SetPosition(chosenLevel.spawnPoint.position);
+                aimController.SetInitialPosition(chosenLevel.spawnPoint.position);
             }
         }
+    }
+    
+    public IndividualLevelController GetCurrentLevel()
+    {
+        if (currentLevel == null)
+        {
+            Debug.LogError("Current level is null. Please ensure a level has been spawned.");
+            return null;
+        }
+        return currentLevel;
     }
 }
