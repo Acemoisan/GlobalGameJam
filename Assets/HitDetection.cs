@@ -15,29 +15,29 @@ public class HitDetection : MonoBehaviour
     GameObject objective;
 
     
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("OnTriggerEnter: " + other.name);
-        if (other.CompareTag(interactableTag))
+        Debug.Log("OnCollisionEnter: " + collision.gameObject.name);
+        if (collision.gameObject.CompareTag(interactableTag))
         {
-            if (other.GetComponent<Interactable>() == null) { Debug.LogError("Interactable Component is null on, " + other); }
+            if (collision.gameObject.GetComponent<Interactable>() == null) { Debug.LogError("Interactable Component is null on, " + collision.gameObject); }
 
-            interactee = other.GetComponent<Interactable>();
+            interactee = collision.gameObject.GetComponent<Interactable>();
 
-            //Debug.Log("hit " + other.name);
+            //Debug.Log("hit " + collision.gameObject.name);
             AudioManager.instance.PlaySound(Sound.HitDetection);
             interactee.OnEnter();
             OnEnter?.Invoke();
         }
 
-        // else if (other.CompareTag(objectiveTag))
+        // else if (collision.gameObject.CompareTag(objectiveTag))
         // {
-        //     other.transform.parent = transform;
+        //     collision.gameObject.transform.parent = transform;
         //     carryingObjective = true;
-        //     objective = other.gameObject;
+        //     objective = collision.gameObject;
         // }
 
-        else if (other.CompareTag(finishLineTag))
+        else if (collision.gameObject.CompareTag(finishLineTag))
         {
             if (GameStateManager.instance != null)
             {
@@ -53,14 +53,14 @@ public class HitDetection : MonoBehaviour
         carryingObjective = false;
     }
 
-    void OnTriggerStay(Collider other)
+    void OnCollisionStay(Collision collision)
     {
 
     }
 
-    void OnTriggerExit(Collider other)
+    void OnCollisionExit(Collision collision)
     {
-        // if (other.CompareTag(interactableTag))
+        // if (collision.gameObject.CompareTag(interactableTag))
         // {
         //     OnExit?.Invoke();
         // }

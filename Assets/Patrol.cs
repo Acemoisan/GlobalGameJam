@@ -7,10 +7,12 @@ public class Patrol : MonoBehaviour
     [SerializeField] List<Transform> waypoints = new List<Transform>();
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float waitTime = 1f;
+    [SerializeField] float startDelay = 0;
     
     private int currentWaypointIndex = 0;
     private bool isWaiting = false;
-    
+    private bool canStart = false;
+
     void Start()
     {
         if (waypoints.Count == 0)
@@ -18,14 +20,22 @@ public class Patrol : MonoBehaviour
             Debug.LogWarning("No waypoints assigned to Patrol script on " + gameObject.name);
             return;
         }
-        
+
         // Start at the first waypoint
         transform.position = waypoints[0].position;
+        
+        Invoke("StartPatrol", startDelay);
+    }
+
+    void StartPatrol()
+    {
+        canStart = true;
+        currentWaypointIndex = 0;
     }
     
     void Update()
     {
-        if (waypoints.Count == 0 || isWaiting) return;
+        if (waypoints.Count == 0 || isWaiting || !canStart) return;
         
         // Move towards current waypoint
         Transform targetWaypoint = waypoints[currentWaypointIndex];
