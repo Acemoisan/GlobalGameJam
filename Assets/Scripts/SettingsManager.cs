@@ -40,8 +40,8 @@ public class SettingsManager : MonoBehaviour
         // resolutionDropdown.RefreshShownValue();
         //set to full screen 
         
-        Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
-        Screen.SetResolution(Display.main.systemWidth, Display.main.systemHeight, true);
+        // Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+        // Screen.SetResolution(Display.main.systemWidth, Display.main.systemHeight, true);
     }
 
 
