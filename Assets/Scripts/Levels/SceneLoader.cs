@@ -59,6 +59,12 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(AutoQuitAfterDelay());
     }
 
+    public void StopAutoQuitCoroutine()
+    {
+        Debug.Log("Stopping auto quit coroutine...");
+        StopAllCoroutines();
+    }
+
     private IEnumerator AutoQuitAfterDelay()
     {
         yield return new WaitForSecondsRealtime(180); // 3 minutes
