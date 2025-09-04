@@ -88,6 +88,8 @@ public class GameStateManager : MonoBehaviour
 
         //start auto quit timer, etc. invoked in unity event 
         OnPatientDeath?.Invoke();
+        try { GameplayMetrics.AddAttempt(time, score); } catch {}
+
 
         if (LeaderBoardSystem.Instance.IsHighScore(time, score))
         {

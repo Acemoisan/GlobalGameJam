@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -24,14 +25,14 @@ public static class GameDataLog
         return companyPath;
     }
     
-    public static void LogSession(float sessionTime, float totalTime)
+    public static void LogSession(float sessionTime, float totalTime, Dictionary<string, string> customData)
     {
         Debug.Log(Application.persistentDataPath);
         Debug.Log(Application.companyName);
 
         try
         {
-            string logEntry = GenerateSessionLogEntry(sessionTime, totalTime);
+            string logEntry = GenerateSessionLogEntry(sessionTime, totalTime, customData);
             
             // Read existing content
             string existingContent = "";
@@ -49,7 +50,7 @@ public static class GameDataLog
         }
     }
     
-    private static string GenerateSessionLogEntry(float sessionTime, float totalTime)
+    private static string GenerateSessionLogEntry(float sessionTime, float totalTime, Dictionary<string, string> customData)
     {
         DateTime now = DateTime.Now;
         string sessionId = Guid.NewGuid().ToString().Substring(0, 8).ToUpper();
@@ -84,8 +85,21 @@ public static class GameDataLog
         logEntry += $"========================================\n";
         //logEntry += $"🎉 Session Summary: {GetSessionSummary(sessionTime, totalTime)}\n";
         logEntry += $"🎯 Next Goal: {GetNextGoal(totalTime)}\n";
-        logEntry += $"========================================\n\n";
+        logEntry += $"========================================\n";
         
+
+        // Append modular custom data at the bottom if provided
+        if (customData != null && customData.Count > 0)
+        {
+            logEntry += $"🧩 GAME DATA\n";
+            foreach (KeyValuePair<string, string> kv in customData)
+            {
+                string key = string.IsNullOrWhiteSpace(kv.Key) ? "Key" : kv.Key.Trim();
+                string value = kv.Value ?? string.Empty;
+                logEntry += $"   • {key}: {value}\n";
+            }
+            logEntry += $"========================================\n";
+        }
         return logEntry;
     }
     

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -90,9 +91,22 @@ public class RealTimeTracker: MonoBehaviour
             TotalTimePlayed += sessionTime;
             SaveTotalTime();
             _isTracking = false;
+
+            Dictionary<string, string> customData = new Dictionary<string, string>();
+            
+            //customData.Add("Session Time", sessionTime.ToString());
+
+            var attempts = GameplayMetrics.GetAttempts();
+            for (int i = 0; i < attempts.Count; i++)
+            {
+                var a = attempts[i];
+                string label = $"Attempt {i}";
+                string timeFormatted = GameplayMetrics.FormatTimeCompact(a.timeSeconds);
+                customData[label] = $"Time: {timeFormatted} | Patients Saved: {a.points}";
+            }
             
             // Log session data
-            GameDataLog.LogSession(sessionTime, TotalTimePlayed);
+            GameDataLog.LogSession(sessionTime, TotalTimePlayed, customData);
             Debug.Log("Session time: " + sessionTime);
         }
     }
